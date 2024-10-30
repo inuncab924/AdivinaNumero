@@ -1,0 +1,7 @@
+{
+  "name": "AdivinaNumero",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Adivina el número</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <h2 class="title">Intenta adivinar el número (entre 0 y 100):</h2>
+    
+    <input [(ngModel)]="num" type="number" placeholder="Introduce tu número" class="input-guess">
+    
+    <button (click)="compruebaNumero()" class="btn-check">Comprobar</button>
+    
+    <p *ngIf="mayorMenor" class="hint">{{ mayorMenor }}</p>
+    
+    <div class="attempts">
+      <h3>Intentos: {{ numAttempts }}</h3>
+    </div>
+
+    <ion-button expand="block" (click)="restartGame()" color="danger" class="btn-restart">
+      Reiniciar juego
+    </ion-button>
+  </div>
+</ion-content>
